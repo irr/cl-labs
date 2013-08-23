@@ -1,0 +1,76 @@
+SBCL CentOS/Ubuntu dependencies:
+sudo yum groupinstall "Development Tools"
+sudo yum install texinfo texlive-latex texinfo-tex
+sudo apt-get install texinfo texlive-latex-base build-essential
+
+(ql:quickload "quicklisp-slime-helper")
+(ql:quickload "hunchentoot")
+(ql:quickload "cl-redis")
+(ql:quickload "cl-json")
+(ql:quickload "cl-memcached")
+(ql:quickload "clsql-mysql")
+(ql:quickload "clsql-sqlite3")
+(ql:quickload "trivial-dump-core")
+
+(ql:quickload "lparallel")
+(ql:quickload :lfarm-server)
+(ql:quickload :lfarm-client)
+
+(ql:quickload "cl-mongo")
+(ql:quickload "cl-async")
+(ql:quickload "trivial-shell")
+(ql:quickload "zeromq")
+(ql:quickload "iconv")
+
+How to update Quicklisp?
+(ql:update-dist "quicklisp")
+
+How to uninstall a package?
+(use-package :ql-dist)
+(uninstall (release "zeromq"))
+
+How to check SBCL default encoding?
+(sb-impl::default-external-format)
+:UTF-8
+
+How to change current directory?
+(setf *default-pathname-defaults* (truename "/tmp"))
+
+Uninstall SBCL?
+sudo rm -rf /usr/local/bin/sbcl* /usr/local/lib/sbcl /usr/local/share/man/man1/sbcl.1 /usr/local/share/info/asdf.info /usr/local/share/info/sbcl.info* /usr/local/share/doc/sbcl/asdf.pdf /usr/local/share/doc/sbcl /usr/local/lib/sbcl
+
+Number conversions
+(write-to-string 1972 :base 16)
+(parse-integer "7B4" :radix 16)
+
+#:label
+http://www.lispworks.com/documentation/HyperSpec/Body/02_dh.htm
+
+Date conversions
+http://cl-cookbook.sourceforge.net/dates_and_times.html
+
+(get-universal-time)
+(decode-universal-time 3220993326)
+
+(get-decoded-time)
+(encode-universal-time 6 22 19 25 1 2002)
+
+(defconstant *day-names*
+    '("Monday" "Tuesday" "Wednesday"
+      "Thursday" "Friday" "Saturday"
+      "Sunday"))
+*DAY-NAMES*
+
+(multiple-value-bind
+    (second minute hour date month year day-of-week dst-p tz)
+    (get-decoded-time)
+    (format t "It is now ~2,'0d:~2,'0d:~2,'0d of ~a, ~d/~2,'0d/~d (GMT~@d)"
+          hour
+          minute
+          second
+          (nth day-of-week *day-names*)
+          month
+          date
+          year
+          (- tz)))
+          

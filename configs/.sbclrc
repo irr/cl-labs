@@ -1,0 +1,21 @@
+(defvar *last-package* nil)
+(defvar *cached-prompt* nil)
+  
+(defun package-prompt (stream)
+  (unless (eq *last-package* *package*)
+    (setf *cached-prompt*
+	  (concatenate 'string (or (first (package-nicknames *package*))
+				   (package-name *package*))
+		       "> "))
+    (setf *last-package* *package*))
+  (terpri)
+  (princ *cached-prompt* stream))
+
+(setf sb-int:*repl-prompt-fun* #'package-prompt) 
+
+;;; The following lines added by ql:add-to-init-file:
+#-quicklisp
+(let ((quicklisp-init #P"/opt/lisp/quicklisp/setup.lisp"))
+  (when (probe-file quicklisp-init)
+    (load quicklisp-init)))
+
