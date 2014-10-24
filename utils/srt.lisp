@@ -55,9 +55,11 @@
     (shell (format nil "perl -pe 's/<.*?i>|<.*?b>|<.*?u>//gi' \"~A.bak\" > \"~A\"; rm -rf \"~A.bak\"" path path path)))
     
 (defun convert (path) 
-    (let* ((kw (intern (file-encoding path) "KEYWORD")))
+    (let* ((fe (file-encoding path))
+           (kw (intern fe "KEYWORD")))
         (iconv kw path)
-        (perl path)))
+        (perl path)
+        (shell (format nil "zenity --info --text='Filename: ~A~%Encoding: ~A'" path fe))))
 
 (defun srt (path)
     (convert path))
