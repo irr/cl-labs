@@ -7,7 +7,8 @@ lisp-labs
 
 First of all, create a file **customize-target-features.lisp** under *SBCL root source*, and run: *sh make.sh*
 
-```lisp
+```lisp 
+;; SBCL (old versions)
 (lambda (features)
    (flet ((enable (x)
             (pushnew x features))
@@ -17,6 +18,15 @@ First of all, create a file **customize-target-features.lisp** under *SBCL root 
      ;; and x86 Mac OS X (experimental).
      (enable :sb-thread)
      (enable :sb-unicode)))
+```
+
+```shell
+# iconv prerequisite
+git clone git@github.com:irr/libfixposix.git
+cd libfixposix
+autoreconf -i -f
+./configure
+make install
 ```
 
 Projects:
@@ -32,6 +42,7 @@ Dependencies
 * [rcl] - A Common Lisp Interface to R
 * [cl-redis] - Redis client for Common Lisp
 * [cl-json] - A JSON parser and generator in Common-Lisp
+* [libfixposix] - Thin wrapper over POSIX syscalls
 
 ```lisp
 (ql:quickload :quicklisp-slime-helper)
@@ -52,7 +63,6 @@ Dependencies
 (ql:quickload :clsql-mysql)
 (ql:quickload :clsql-sqlite3)
 
-(ql:quickload :cl-mongo)
 (ql:quickload :cl-async)
 (ql:quickload :zeromq)
 (ql:quickload :iconv)
@@ -74,14 +84,14 @@ WITHOUT WARRANTIES OR CONDITIONS OF ANY KIND, either express or implied.
 See the License for the specific language governing permissions and
 limitations under the License.
 
-  [SBCL]: http://www.sbcl.org/
+  [SBCL]: http://www.sbcl.org
   [practicals-1.0.3]: https://github.com/irr/lisp-labs/tree/master/practicals-1.0.3
   [web]: https://github.com/irr/lisp-labs/tree/master/web
   [utils]: https://github.com/irr/lisp-labs/tree/master/utils
-  [gigamonkeys.com]: http://www.gigamonkeys.com/book/
-  [quicklisp]: http://www.quicklisp.org/
-  [hunchentoot]: http://weitz.de/hunchentoot/
-  [rcl]: http://common-lisp.net/project/rcl/
+  [gigamonkeys.com]: http://www.gigamonkeys.com/book
+  [quicklisp]: http://www.quicklisp.org
+  [hunchentoot]: http://weitz.de/hunchentoot
+  [rcl]: http://common-lisp.net/project/rcl
   [cl-redis]: https://github.com/vseloved/cl-redis
-  [cl-json]: http://common-lisp.net/project/cl-json/
-  
+  [cl-json]: http://common-lisp.net/project/cl-json
+  [libfixposix]: https://github.com/irr/libfixposix
