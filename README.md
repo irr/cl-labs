@@ -24,9 +24,14 @@ First of all, create a file **customize-target-features.lisp** under *SBCL root 
 # iconv prerequisite
 git clone git@github.com:irr/libfixposix.git
 cd libfixposix
+git remote add upstream https://github.com/sionescu/libfixposix.git
+git fetch upstream && git merge upstream/master && git push
 autoreconf -i -f
 ./configure
-make install
+sudo make install
+su -c  "echo \"/usr/local/lib\" > /etc/ld.so.conf.d/libfixposix.conf"
+sudo ldconfig
+ldconfig -p |grep libfixposix
 ```
 
 Projects:
