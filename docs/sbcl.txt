@@ -16,18 +16,16 @@ sudo apt-get install texinfo texlive-latex-base build-essential
 (ql:quickload :lfarm-server)
 (ql:quickload :lfarm-client)
 
-(ql:quickload "cl-mongo")
-(ql:quickload "cl-async")
 (ql:quickload "trivial-shell")
-(ql:quickload "zeromq")
 (ql:quickload "iconv")
+(ql:quickload "getopt")
 
 How to update Quicklisp?
 (ql:update-dist "quicklisp")
 
 How to uninstall a package?
 (use-package :ql-dist)
-(uninstall (release "zeromq"))
+(uninstall (release "getopt"))
 
 How to check SBCL default encoding?
 (sb-impl::default-external-format)
