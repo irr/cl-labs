@@ -1,6 +1,6 @@
 SBCL CentOS/Ubuntu dependencies:
 sudo yum groupinstall "Development Tools"
-sudo yum install texinfo texlive-latex texinfo-tex
+sudo yum install libffi-devel texinfo texlive-latex texinfo-tex texlive-ec texlive-cm-super
 sudo apt-get install texinfo texlive-latex-base build-essential
 
 (ql:quickload "quicklisp-slime-helper")
