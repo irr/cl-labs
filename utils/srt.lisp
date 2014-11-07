@@ -62,7 +62,6 @@
           (if (= (perl path) 0)
             (progn (shell (format nil "zenity --info --text='Filename: ~A~%Encoding: ~A'" path fe)) (setq st 0))))
         (shell (format nil "rm -rf \"~A.bak\"" path))
-        (format t "code: ~a~%" st)
         (sb-ext:exit :code st)))
 
 (defun srt (path)
