@@ -49,10 +49,10 @@
         exit-status))
 
 (defun iconv (kw path)
-    (shell (format nil "iconv -f ~A -t UTF-8//TRANSLIT < \"~A\" > \"~A.bak\"" kw path path)))
+    (shell (format nil "iconv -f ~A -t UTF-8//TRANSLIT < \"~A\" > \"/tmp/~A.bak\"" kw path path)))
 
 (defun perl (path)
-    (shell (format nil "perl -pe 's/<.*?i>|<.*?b>|<.*?u>//gi' \"~A.bak\" > \"~A\"" path path)))
+    (shell (format nil "perl -pe 's/<.*?i>|<.*?b>|<.*?u>//gi' \"/tmp/~A.bak\" > \"~A\"" path path)))
     
 (defun convert (path) 
     (let* ((fe (file-encoding path))
@@ -61,7 +61,7 @@
         (if (= (iconv kw path) 0)
           (if (= (perl path) 0)
             (progn (shell (format nil "zenity --info --text='Filename: ~A~%Encoding: ~A'" path fe)) (setq st 0))))
-        (shell (format nil "rm -rf \"~A.bak\"" path))
+        (shell (format nil "rm -rf \"/tmp/~A.bak\"" path))
         (sb-ext:exit :code st)))
 
 (defun srt (path)
