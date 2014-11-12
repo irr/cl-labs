@@ -3,6 +3,8 @@ sudo yum groupinstall "Development Tools"
 sudo yum install libffi-devel texinfo texlive-latex texinfo-tex texlive-ec texlive-cm-super
 sudo apt-get install texinfo texlive-latex-base build-essential
 
+curl -O http://beta.quicklisp.org/quicklisp.lisp
+
 (ql:quickload "quicklisp-slime-helper")
 (ql:quickload "hunchentoot")
 (ql:quickload "cl-redis")
