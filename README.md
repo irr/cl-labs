@@ -34,6 +34,11 @@ sudo ldconfig
 ldconfig -p |grep libfixposix
 ```
 
+```shell
+mkdir -p ~/.vim/colors
+cp ~/cl/configs/calmar256-dark.vim ~/.vim/colors/
+```
+
 Projects:
 
 * [practicals-1.0.3] - *Practical Common Lisp* book source code from [gigamonkeys.com]
