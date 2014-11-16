@@ -1,4 +1,4 @@
-set guifont=Monospace\ 11
+set guifont=Ubuntu\ Mono\ 11
 set tabstop=4
 set shiftwidth=4
 set softtabstop=4
