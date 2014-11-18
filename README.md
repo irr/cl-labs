@@ -56,6 +56,11 @@ Dependencies
 * [cl-json] - A JSON parser and generator in Common-Lisp
 * [libfixposix] - Thin wrapper over POSIX syscalls
 
+```shell
+curl -O http://beta.quicklisp.org/quicklisp.lisp
+sbcl --load quicklisp.lisp
+```
+
 ```lisp
 (progn 
     (ql:quickload "hunchentoot") 
