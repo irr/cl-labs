@@ -36,7 +36,7 @@ ldconfig -p |grep libfixposix
 
 ```shell
 mkdir -p ~/.vim/colors
-cp ~/cl/configs/calmar256-dark.vim ~/.vim/colors/
+cp ~/cl/configs/github.vim ~/.vim/colors/
 rm -rf ~/.vimrc
 ln -s ~/cl/configs/.vimrc ~/.vimrc
 ```
@@ -57,27 +57,20 @@ Dependencies
 * [libfixposix] - Thin wrapper over POSIX syscalls
 
 ```lisp
-(ql:quickload :quicklisp-slime-helper)
-(ql:quickload :trivial-dump-core)
-(ql:quickload :trivial-shell)
-
-(ql:quickload :hunchentoot)
-(ql:quickload :cl-redis)
-(ql:quickload :cl-json)
-
-(ql:quickload :lparallel)
-(ql:quickload :lfarm-server)
-(ql:quickload :lfarm-client)
-
-(ql:quickload :rcl)
-
-(ql:quickload :cl-memcached)
-(ql:quickload :clsql-mysql)
-(ql:quickload :clsql-sqlite3)
-
-(ql:quickload :cl-async)
-(ql:quickload :zeromq)
-(ql:quickload :iconv)
+(progn 
+    (ql:quickload "hunchentoot") 
+    (ql:quickload "cl-redis") 
+    (ql:quickload "cl-json") 
+    (ql:quickload "cl-memcached") 
+    (ql:quickload "clsql-mysql") 
+    (ql:quickload "clsql-sqlite3") 
+    (ql:quickload "trivial-dump-core") 
+    (ql:quickload "lparallel") 
+    (ql:quickload :lfarm-server) 
+    (ql:quickload :lfarm-client) 
+    (ql:quickload "trivial-shell") 
+    (ql:quickload "iconv") 
+    (ql:quickload "getopt"))
 ```
 
 Copyright and License

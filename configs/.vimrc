@@ -1,4 +1,4 @@
-set guifont=Monaco\ 12
+set guifont=Ubuntu\ Mono\ 13
 set tabstop=4
 set shiftwidth=4
 set softtabstop=4
@@ -35,4 +35,6 @@ map <F8> :set expandtab<CR>:retab<CR>
 if $COLORTERM == 'gnome-terminal'
   set t_Co=256
 endif
+
+colorscheme github
 
