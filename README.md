@@ -36,7 +36,7 @@ ldconfig -p |grep libfixposix
 
 ```shell
 mkdir -p ~/.vim/colors
-cp ~/cl/configs/github.vim ~/.vim/colors/
+cp ~/cl/configs/calmar256-dark.vim ~/.vim/colors/
 rm -rf ~/.vimrc
 ln -s ~/cl/configs/.vimrc ~/.vimrc
 ```
