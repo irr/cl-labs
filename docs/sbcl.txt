@@ -7,14 +7,14 @@ curl -O http://beta.quicklisp.org/quicklisp.lisp
 
 (ql:quickload "quicklisp-slime-helper")
 
-(progn (ql:quickload "hunchentoot") (ql:quickload "cl-redis") (ql:quickload "cl-json") (ql:quickload "cl-memcached") (ql:quickload "cl-mysql") (ql:quickload "sqlite") (ql:quickload "trivial-dump-core") (ql:quickload "lparallel") (ql:quickload :lfarm-server) (ql:quickload :lfarm-client) (ql:quickload "trivial-shell") (ql:quickload "iconv") (ql:quickload "getopt"))
+(progn (ql:quickload "hunchentoot") (ql:quickload "cl-redis") (ql:quickload "cl-json") (ql:quickload "cl-memcached") (ql:quickload "clsql-mysql") (ql:quickload "clsql-sqlite3") (ql:quickload "trivial-dump-core") (ql:quickload "lparallel") (ql:quickload :lfarm-server) (ql:quickload :lfarm-client) (ql:quickload "trivial-shell") (ql:quickload "iconv") (ql:quickload "getopt"))
 
 (ql:quickload "hunchentoot")
 (ql:quickload "cl-redis")
 (ql:quickload "cl-json")
 (ql:quickload "cl-memcached")
-(ql:quickload "cl-mysql")
-(ql:quickload "sqlite")
+(ql:quickload "clsql-mysql")
+(ql:quickload "clsql-sqlite3")
 (ql:quickload "trivial-dump-core")
 
 (ql:quickload "lparallel")
