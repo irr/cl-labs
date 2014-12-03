@@ -1,0 +1,5 @@
+alias cq='cd /opt/lisp/quicklisp/dists/quicklisp/software'
+alias lisp='rlwrap -H /dev/null sbcl'
+alias lispbak='rm -rf /opt/lisp/quicklisp.bak; cp -r /opt/lisp/quicklisp /opt/lisp/quicklisp.bak'
+alias lispres='if [ -d /opt/lisp/quicklisp.bak ]; then rm -rf /opt/lisp/quicklisp; cp -r /opt/lisp/quicklisp.bak /opt/lisp/quicklisp; fi'
+

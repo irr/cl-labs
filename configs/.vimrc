@@ -1,4 +1,5 @@
 set guifont=Ubuntu\ Mono\ 13
+set lines=35 columns=135
 set tabstop=4
 set shiftwidth=4
 set softtabstop=4
@@ -11,11 +12,13 @@ set paste
 set pastetoggle=<F5>
 set expandtab
 retab
-syntax on
 set guioptions-=T
 set laststatus=2
 set statusline=%02n:%t[%{strlen(&fenc)?&fenc:'none'},%{&ff}]%h%m%r%y%=%c,%l/%L\ %P
 set showtabline=0
+
+syntax on
+filetype plugin indent on
 
 vnoremap <C-X> "+x
 vnoremap <S-Del> "+x
@@ -29,12 +32,11 @@ map <S-Insert> "+p
 cmap <C-V> <C-R>+
 cmap <S-Insert> <C-R>+
 
-map <F2> :set fileencoding=utf-8<CR>:set fileformat=unix<CR>:w<CR>
-map <F8> :set expandtab<CR>:retab<CR>
+map <F8> :set fileencoding=utf-8<CR>:set fileformat=unix<CR>:w<CR>
 
-if $COLORTERM == 'xfce4-terminal'
+if $COLORTERM == 'gnome-terminal'
   set t_Co=256
 endif
 
-colorscheme calmar256-dark
+colorscheme github
 
