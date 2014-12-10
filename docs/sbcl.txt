@@ -77,3 +77,7 @@ http://cl-cookbook.sourceforge.net/dates_and_times.html
           year
           (- tz)))
           
+(ql:update-all-dists)
+(ql:update-client)
+
+
