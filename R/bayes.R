@@ -1,3 +1,4 @@
+# install.packages('e1071')
 # source("bayes.R")
 # bayes_query(5.9, 3.0, 5.1, 1.8)
 
