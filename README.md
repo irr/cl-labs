@@ -62,7 +62,8 @@ sbcl --load quicklisp.lisp
 ```
 
 ```lisp
-(progn 
+(progn
+    (ql:quickload "quicklisp-slime-helper")
     (ql:quickload "hunchentoot") 
     (ql:quickload "cl-redis") 
     (ql:quickload "cl-json") 
@@ -75,6 +76,7 @@ sbcl --load quicklisp.lisp
     (ql:quickload :lfarm-client) 
     (ql:quickload "trivial-shell") 
     (ql:quickload "iconv") 
+    (ql:quickload :rcl)
     (ql:quickload "getopt"))
 ```
 
