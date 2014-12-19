@@ -7,6 +7,7 @@
 (setq slime-net-coding-system 'utf-8-unix)
 
 (ignore-errors (load (expand-file-name "/opt/lisp/quicklisp/slime-helper.el")))
+
 (setq inferior-lisp-program "/usr/local/bin/sbcl")
 
 (setq save-abbrevs nil)

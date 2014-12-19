@@ -63,7 +63,6 @@ sbcl --load quicklisp.lisp
 
 ```lisp
 (progn
-    (ql:quickload "quicklisp-slime-helper")
     (ql:quickload "hunchentoot") 
     (ql:quickload "cl-redis") 
     (ql:quickload "cl-json") 
