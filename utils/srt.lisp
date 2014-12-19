@@ -1,4 +1,4 @@
-; lisp --noinform --script srt.lisp <file>
+; sbcl --noinform --script srt.lisp "<file>"
 
 (let ((quicklisp-init #P"/opt/lisp/quicklisp/setup.lisp"))
   (when (probe-file quicklisp-init)
