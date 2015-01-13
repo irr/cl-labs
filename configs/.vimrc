@@ -1,5 +1,5 @@
-set guifont=Ubuntu\ Mono\ 13
-set lines=30 columns=130
+set guifont=Ubuntu\ Mono\ 12
+set lines=36 columns=150
 set tabstop=4
 set shiftwidth=4
 set softtabstop=4
@@ -14,7 +14,8 @@ set guioptions-=T
 set laststatus=2
 set statusline=%02n:%t[%{strlen(&fenc)?&fenc:'none'},%{&ff}]%h%m%r%y%=%c,%l/%L\ %P
 set showtabline=0
-set noexpandtab
+set expandtab
+retab
 
 syntax on
 filetype plugin indent on
@@ -32,9 +33,6 @@ cmap <C-V> <C-R>+
 cmap <S-Insert> <C-R>+
 
 map <F2> :set fileencoding=utf-8<CR>:set fileformat=unix<CR>:w<CR>
-map <F8> :set expandtab<CR>:retab<CR>:set noexpandtab<CR>:w<CR>
 
 set t_Co=256
-
-colorscheme calmar256-dark
 
