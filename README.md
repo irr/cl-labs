@@ -34,13 +34,6 @@ sudo ldconfig
 ldconfig -p |grep libfixposix
 ```
 
-```shell
-mkdir -p ~/.vim/colors
-cp ~/cl/configs/mirodark.vim ~/.vim/colors/
-rm -rf ~/.vimrc
-ln -s ~/cl/configs/.vimrc ~/.vimrc
-```
-
 Projects:
 
 * [practicals-1.0.3] - *Practical Common Lisp* book source code from [gigamonkeys.com]
