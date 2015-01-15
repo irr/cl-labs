@@ -21,7 +21,7 @@ First of all, create a file **customize-target-features.lisp** under *SBCL root 
 ```
 
 ```shell
-sudo apt-get install build-essential libfixposix-dev texinfo texlive-latex-base build-essential texlive-fonts-recommended autoconf
+sudo apt-get install build-essential libfixposix-dev texinfo texlive-latex-base texlive-fonts-recommended autoconf
 ```
 
 Projects:
