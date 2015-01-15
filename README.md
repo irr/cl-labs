@@ -60,15 +60,14 @@ sbcl --load quicklisp.lisp
     (ql:quickload "cl-redis") 
     (ql:quickload "cl-json") 
     (ql:quickload "cl-memcached") 
-    (ql:quickload "clsql-mysql") 
-    (ql:quickload "clsql-sqlite3") 
+    (ql:quickload "cl-mysql") 
+    (ql:quickload "sqlite") 
     (ql:quickload "trivial-dump-core") 
     (ql:quickload "lparallel") 
     (ql:quickload :lfarm-server) 
     (ql:quickload :lfarm-client) 
     (ql:quickload "trivial-shell") 
     (ql:quickload "iconv") 
-    (ql:quickload :rcl)
     (ql:quickload "getopt"))
 ```
 
