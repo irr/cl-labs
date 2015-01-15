@@ -21,17 +21,7 @@ First of all, create a file **customize-target-features.lisp** under *SBCL root 
 ```
 
 ```shell
-# iconv prerequisite
-git clone git@github.com:irr/libfixposix.git
-cd libfixposix
-git remote add upstream https://github.com/sionescu/libfixposix.git
-git fetch upstream && git merge upstream/master && git push
-autoreconf -i -f
-./configure
-sudo make install
-su -c  "echo \"/usr/local/lib\" > /etc/ld.so.conf.d/libfixposix.conf"
-sudo ldconfig
-ldconfig -p |grep libfixposix
+sudo apt-get install build-essential libfixposix-dev texinfo texlive-latex-base build-essential texlive-fonts-recommended autoconf
 ```
 
 Projects:
@@ -44,10 +34,8 @@ Dependencies
 -----------
 
 * [hunchentoot] - The Common Lisp web server formerly known as TBNL
-* [rcl] - A Common Lisp Interface to R
 * [cl-redis] - Redis client for Common Lisp
 * [cl-json] - A JSON parser and generator in Common-Lisp
-* [libfixposix] - Thin wrapper over POSIX syscalls
 
 ```shell
 curl -O http://beta.quicklisp.org/quicklisp.lisp
@@ -94,7 +82,5 @@ limitations under the License.
   [gigamonkeys.com]: http://www.gigamonkeys.com/book
   [quicklisp]: http://www.quicklisp.org
   [hunchentoot]: http://weitz.de/hunchentoot
-  [rcl]: http://common-lisp.net/project/rcl
   [cl-redis]: https://github.com/vseloved/cl-redis
   [cl-json]: http://common-lisp.net/project/cl-json
-  [libfixposix]: https://github.com/irr/libfixposix
