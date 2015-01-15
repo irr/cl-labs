@@ -76,9 +76,9 @@ See the License for the specific language governing permissions and
 limitations under the License.
 
   [SBCL]: http://www.sbcl.org
-  [practicals-1.0.3]: https://github.com/irr/lisp-labs/tree/master/practicals-1.0.3
-  [web]: https://github.com/irr/lisp-labs/tree/master/web
-  [utils]: https://github.com/irr/lisp-labs/tree/master/utils
+  [practicals-1.0.3]: https://github.com/irr/cl-labs/tree/master/practicals-1.0.3
+  [web]: https://github.com/irr/cl-labs/tree/master/web
+  [utils]: https://github.com/irr/cl-labs/tree/master/utils
   [gigamonkeys.com]: http://www.gigamonkeys.com/book
   [quicklisp]: http://www.quicklisp.org
   [hunchentoot]: http://weitz.de/hunchentoot
