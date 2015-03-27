@@ -45,6 +45,7 @@ sbcl --load quicklisp.lisp
 ```lisp
 (progn
     (ql:quickload "hunchentoot") 
+    (ql:quickload "cl-ppcre")
     (ql:quickload "cl-redis") 
     (ql:quickload "cl-json") 
     (ql:quickload "cl-memcached") 
