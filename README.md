@@ -36,6 +36,7 @@ Dependencies
 * [hunchentoot] - The Common Lisp web server formerly known as TBNL
 * [cl-redis] - Redis client for Common Lisp
 * [cl-json] - A JSON parser and generator in Common-Lisp
+* [woo] - A fast non-blocking HTTP server on top of libev
 
 ```shell
 curl -O http://beta.quicklisp.org/quicklisp.lisp
@@ -57,6 +58,7 @@ sbcl --load quicklisp.lisp
     (ql:quickload :lfarm-client) 
     (ql:quickload "trivial-shell") 
     (ql:quickload "iconv") 
+    (ql:quickload :woo))
     (ql:quickload "getopt"))
 ```
 
@@ -85,3 +87,4 @@ limitations under the License.
   [hunchentoot]: http://weitz.de/hunchentoot
   [cl-redis]: https://github.com/vseloved/cl-redis
   [cl-json]: http://common-lisp.net/project/cl-json
+  [woo]: https://github.com/fukamachi/woo
