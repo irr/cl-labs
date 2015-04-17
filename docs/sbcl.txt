@@ -81,4 +81,10 @@ http://cl-cookbook.sourceforge.net/dates_and_times.html
 (ql:update-all-dists)
 (ql:update-client)
 
+(cffi:defcallback sigint-cb :void ((evloop :pointer) (signal :pointer) (events :int))
+    (declare (ignore signal events))
+    #+sbcl
+    (sb-ext:exit)
+    #-sbcl
+    (cl-user::quit))
 
