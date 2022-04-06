@@ -1,14 +1,14 @@
-(add-to-list 'load-path "~/.emacs.d/")
+;(add-to-list 'load-path "~/.emacs.d/")
 
 (setenv "LANG" "en_US.UTF-8")
 (set-language-environment "utf-8")
 
-(setq slime-lisp-implementations '((sbcl ("/usr/local/bin/sbcl") :coding-system utf-8-unix)))
+(setq slime-lisp-implementations '((sbcl ("/usr/bin/sbcl") :coding-system utf-8-unix)))
 (setq slime-net-coding-system 'utf-8-unix)
 
-(ignore-errors (load (expand-file-name "/opt/lisp/quicklisp/slime-helper.el")))
-
-(setq inferior-lisp-program "/usr/local/bin/sbcl")
+(load (expand-file-name "/opt/lisp/quicklisp/slime-helper.el"))
+  ;; Replace "sbcl" with the path to your implementation
+ (setq inferior-lisp-program "/usr/bin/sbcl")
 
 (setq save-abbrevs nil)
 
@@ -76,4 +76,5 @@
   ;; If you edit it by hand, you could mess it up, so be careful.
   ;; Your init file should contain only one such instance.
   ;; If there is more than one, they won't work right.
- '(default ((t (:inherit nil :stipple nil :background "white" :foreground "black" :inverse-video nil :box nil :strike-through nil :overline nil :underline nil :slant normal :weight normal :height 128 :width normal :foundry "unknown" :family "Ubuntu Mono")))))
+ '(default ((t (:inherit nil :stipple nil :background "white" :foreground "black" :inverse-video nil :box nil :strike-through nil :overline nil :underline nil :slant normal :weight normal :height 128 :width normal :foundry "unknown" :family "JetBrains Mono")))))
+
